@@ -1,7 +1,7 @@
 # IuriTrabalho
-npm init
-npm install fs
-npm install express
-npm install nodemon
-npm install swagger-ui-express
-npm install cors
+npm init<br>
+npm install fs<br>
+npm install express<br>
+npm install nodemon<br>
+npm install swagger-ui-express<br>
+npm install cors<br>
