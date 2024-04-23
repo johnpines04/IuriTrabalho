@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  padding: 20px;
+}
+dialog {
+  display: none;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #555;
+}
+#quadrado-preto,
+#quadrado-preto2,
+#quadrado-preto3 {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* H4 styles */
+h4 {
+  cursor: pointer;
+}
+/* Modal styles */
+dialog[open] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  #filho {
+    margin-top: 10px;
+  }
+}
+#listaTechs {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}

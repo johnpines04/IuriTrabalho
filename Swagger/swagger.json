@@ -1,0 +1,117 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Api de Techs de Celeste",
+    "version": "1.0.0",
+    "description": "API para cadastro de Techs de Celeste"
+  },
+  "paths": {
+    "/techs": {
+      "get": {
+        "tags": ["Operações sem ID"],
+        "summary": "Obter a lista de Techs",
+        "responses": {
+          "202": {
+            "description": "Lista de Techs retornada com sucesso"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Operações sem ID"],
+        "summary": "Criar uma nova Tech",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/techs"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Nova Tech cadastrada com sucesso!"
+          },
+          "400": {
+            "description": "ID já existe, tente novamente com um ID diferente"
+          }
+        }
+      }
+    },
+    "/techs/{id}": {
+      "put": {
+        "tags": ["Operações com ID"],
+        "summary": "Atualizar informações de uma Tech pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/techs"
+              }
+            }
+          }
+        },
+        "responses": {
+          "404": {
+            "description": "Tech não encontrada :/"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Operações com ID"],
+        "summary": "Excluir uma Tech pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tech excluído com sucesso"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Tech": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "titulo": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "exemplo": {
+            "type": "string"
+          },
+          "autor": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

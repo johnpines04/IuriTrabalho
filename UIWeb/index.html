@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento das Techs</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../JS/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="pai">
+        <h3>Gerenciamento de Techs</h3>
+      </div>
+      <div id="filho" onClick="adicionarModal()">
+        <h3>Adicionar</h3>
+      </div>
+    </header>
+    <main>
+      <div id="listaTechs"></div>
+    </main>
+    <dialog id="dialogTech">
+      <div id="quadrado-preto"></div>
+    </dialog>
+    <dialog id="dialogAdd">
+      <div id="quadrado-preto2">
+        <h4 onclick="sairModal()">Voltar</h4>
+        <h2>Adicionar uma Tech:</h2>
+        <form id="formAdicionarTech">
+          <label for="id">ID:</label>
+          <input type="text" id="id" name="id" required />
+          <label for="tituloTech">Título:</label>
+          <input type="text" id="tituloTech" name="tituloTech" required />
+          <label for="exemploTech">Exemplo:</label>
+          <input type="text" id="exemploTech" name="exemploTech" required />
+          <label for="autorTech">Autor do Exemplo:</label>
+          <input type="text" id="autorTech" name="autorTech" required />
+          <label for="descricaoTech">Descrição:</label>
+          <input type="text" id="descricaoTech" name="descricaoTech" required />
+          <button type="button" onclick="adicionarTech()" class="botao">
+            Adicionar
+          </button>
+        </form>
+      </div>
+    </dialog>
+    <dialog id="dialogAlt">
+      <div id="quadrado-preto3">
+        <h4 onclick="sairModal3()">Voltar</h4>
+        <form id="formAdicionarTech">
+          <label for="id">ID:</label>
+          <input type="text" id="idAlt" name="id" required />
+          <label for="tituloTech">Título:</label>
+          <input type="text" id="tituloTechAlt" name="tituloTech" required />
+          <label for="exemploTech">Exemplo:</label>
+          <input type="text" id="exemploTechAlt" name="exemploTech" required />
+          <label for="autorTech">Autor do Exemplo:</label>
+          <input type="text" id="autorTechAlt" name="autorTech" required />
+          <label for="descricaoTech">Descrição:</label>
+          <input
+            type="text"
+            id="descricaoTechAlt"
+            name="descricaoTech"
+            required
+          />
+          <button type="button" onclick="alterarTech()" class="botao">
+            Alterar
+          </button>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>
